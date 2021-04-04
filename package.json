@@ -1,0 +1,39 @@
+{
+  "name": "nodeapi",
+  "version": "1.0.0",
+  "description": "A Node JS API",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon --trace-warnings app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd '../react-front' && npm run build",
+    "install-client": "cd '../react-front' && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "start": "nodemon app.js"
+  },
+  "keywords": [
+    "node",
+    "api"
+  ],
+  "author": "Reuel Sam",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-jwt": "^6.0.0",
+    "express-validator": "^5.3.1",
+    "formidable": "^1.2.2",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "mongoose": "^5.11.15",
+    "morgan": "^1.10.0",
+    "node-kmeans": "^1.1.9",
+    "nodemailer": "^6.5.0",
+    "nodemon": "^2.0.7",
+    "uuid": "^8.3.2",
+    "uuidv1": "^1.6.14"
+  }
+}
