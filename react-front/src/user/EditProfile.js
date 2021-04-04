@@ -198,7 +198,7 @@ class EditProfile extends Component {
         const photoUrl = id ? `${process.env.REACT_APP_API_URL}/user/photo/${id}?${new Date().getTime()}` : DefaultProfile;
 
         return (
-            <div className="container">
+            <div className="container" >
                 <h2 className="mt-5 mb-5">Edit Profile</h2>
 
                 <div className="alert alert-danger" style={{display: error ? "" : "none"}}>

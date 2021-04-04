@@ -135,16 +135,18 @@ export default class Signup extends Component {
             
             {this.tagsForm()}
 
-            <button onClick={this.clickSubmit} className="btn btn-raised btn-primary">Submit</button>
-
+            <center>
+                <button onClick={this.clickSubmit} className="btn btn-raised btn-primary">Submit</button>
+            </center>
         </form>
     )
 
     render() {
         const {name, email, password, repassword, error, open} = this.state;
         return (
-            <div className="container">
-                <h2 className="mt-5 mb-5">Signup</h2>
+            <div className="container mt-3" style={{backgroundColor:"#ffffff"}}>
+                <br />
+                <h2 className="">Signup</h2>
 
                 <div className="alert alert-danger" style={{display: error ? "" : "none"}}>
                     {error}        
@@ -156,6 +158,7 @@ export default class Signup extends Component {
 
                 {this.signupForm(name, email, password, repassword)}
             
+                <br />
             </div>
         )
     }

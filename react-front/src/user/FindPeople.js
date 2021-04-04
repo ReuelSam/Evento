@@ -61,20 +61,19 @@ class FindPeople extends Component {
         <div className="row">
             {
                 users.map((user , i) => (
-                    <div className="card col-md-3 mr-3 ml-4 mt-3" key={i}>
-
-                        <img 
-                            style={{height: "250px", width:"auto"}} 
-                            className="img-thumbnail" 
-                            src={`${process.env.REACT_APP_API_URL}/user/photo/${user._id}`} 
-                            onError={i => (
-                                i.target.src = `${DefaultProfile}`
-                                )} 
-                            alt={user.name}>
-                                
-                        </img>
-                        
+                    <div className="card col-md-4 mt-3" key={i}>
+                    
                         <div className="card-body">
+
+                            <img 
+                                style={{height: "300px", width:"100%"}} 
+                                className="img-thumbnail" 
+                                src={`${process.env.REACT_APP_API_URL}/user/photo/${user._id}`} 
+                                onError={i => (
+                                    i.target.src = `${DefaultProfile}`
+                                    )} 
+                                alt={user.name}> 
+                            </img>
                             <h5 className="card-title">{user.name}</h5>
                             <p className="card-text">{user.email}</p>
 
@@ -97,7 +96,7 @@ class FindPeople extends Component {
         return (
 
 
-            <div className="container">
+            <div className="container" >
                 <h2 className="mt-5 mb-5">Suggested Users</h2>
                 
                 { loading ? <div className="jumbotron text-center"><h2>Loading...</h2> </div> : "" }

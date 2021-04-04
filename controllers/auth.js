@@ -162,7 +162,7 @@ exports.resetPassword = (req, res) => {
 };
 
 exports.socialLogin = (req, res) => {
-
+    console.log("hello");
     // try signup by finding user with req.email
     let user = User.findOne({ email: req.body.email }, (err, user) => {
         if (err || !user) 
@@ -187,9 +187,14 @@ exports.socialLogin = (req, res) => {
         {
             // update existing user with new social info and login
             req.profile = user;
+            // console.log("backend1", user.name);
+            // console.log("backend2", req.body.name);
+            req.body.name = user.name;
             user = _.extend(user, req.body);
             user.updated = Date.now();
-            user.save();
+            
+            
+            user.save('-name');
             // generate a token with user id and secret
             const token = jwt.sign(
                 { _id: user._id, iss: "NODEAPI" },

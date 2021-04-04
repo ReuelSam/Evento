@@ -27,7 +27,7 @@ const MainRouter = () => {
     })
 
     return ( 
-        <div>
+        <div style={{fontFamily: "-moz-initial", backgroundColor:"#dce1e3", height: "100%"}}>
             { isDesktopOrLaptop && <Menu />}
             { !isDesktopOrLaptop && <MenuMobile />}
 

@@ -163,8 +163,9 @@ export default class Signin extends Component {
             return <Redirect to="/" />
         }
         return (
-            <div className="container">
-                <h2 className="mt-5 mb-5">Sign In</h2>
+            <div className="container mt-3" style={{backgroundColor:"#ffffff"}}>
+                <br />
+                <h2 className="">Sign In</h2>
 
                 <hr />
                 <br />
@@ -197,6 +198,10 @@ export default class Signin extends Component {
                 
                 { this.state.showTags && this.tagsForm()}
 
+
+                <br />
+                <br />
+                <br />
             </div>
         )
     }

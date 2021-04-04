@@ -15,7 +15,7 @@ const isActive = (history, path) => {
 
 const HamburgerMenu = ({history}) => (
 
-    <nav className="navbar navbar-light light-blue lighten-4 bg-primary">
+    <nav className="navbar navbar-light"  style={{ backgroundColor: "#116466"}}>
 
         <a className="lead text-light ml-2" href="/">Evento</a>
 

@@ -92,31 +92,34 @@ class Posts extends Component {
     renderFilters = () => {
         return (
             <div>
-                <h3 className="mt-5 mb-2">Filters</h3>
+                
                 
                 <div className="jumbotron">
 
+                <h3 className="mb-2">Filters</h3>
+
+                    <center>
                     <label className="btn btn-primary ml-3">
                         <input type="checkbox" className="form-check-input" onChange={this.checkLoadAll()} checked={this.state.loadAll}/>
                         All Events
                     </label>
                    
-                    <div className="dropdown">
+                    <div className="dropdown d-inline">
                         <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             {options[this.state.option]}
                         </button>
                         <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             
-                                <button className="btn" style={{width: "200px"}} onClick={() => this.setOption(0)}>Recent</button>                                    
+                                <button className="btn" style={{width: "170px"}} onClick={() => this.setOption(0)}>Recent</button>                                    
                            
-                                <button className="btn" style={{width: "200px"}} onClick={() => this.setOption(1)}>Oldest</button>                                    
+                                <button className="btn" style={{width: "170px"}} onClick={() => this.setOption(1)}>Oldest</button>                                    
                            
-                                <button className="btn" style={{width: "200px"}} onClick={() => this.setOption(2)}>Popular</button>                                    
+                                <button className="btn" style={{width: "170px"}} onClick={() => this.setOption(2)}>Popular</button>                                    
                         </div>
                     </div>
 
-                    <button onClick={this.init} className="btn btn-raised btn-primary mr-5">Filter</button>
-                    
+                    <button onClick={this.init} className="btn btn-raised btn-primary mt-5 d-block">Filter</button>
+                    </center>
 
 
                 </div>
@@ -144,8 +147,8 @@ class Posts extends Component {
                                 />
 
                                 
-                                <h5 className="card-title">{post.title}</h5>
-                                <p className="card-text">{post.body.substring(0, 100)}</p>
+                                <h5 className="card-title" style={{fontSize: "1.75em"}}>{post.title}</h5>
+                                <p className="card-text" style={{fontSize: "1.25em"}}>{post.body.substring(0, 100)}</p>
                                 <br />
                                 <p className="font-italic mark">
                                     Posted By: <Link to={`${posterId}`}>{posterName}{" "}</Link>
@@ -195,7 +198,7 @@ class Posts extends Component {
  
                 {posts.length ? (
                     <button
-                        className="btn btn-raised btn-success mt-5 mb-5"
+                        className="btn btn-raised btn-primary mt-5 mb-5"
                         onClick={() => this.loadMore(1)}
                     >
                         Next ({page + 1})
