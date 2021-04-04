@@ -194,7 +194,7 @@ exports.socialLogin = (req, res) => {
             user.updated = Date.now();
             
             
-            user.save('-name');
+            user.save();
             // generate a token with user id and secret
             const token = jwt.sign(
                 { _id: user._id, iss: "NODEAPI" },
