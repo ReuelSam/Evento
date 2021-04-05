@@ -1,11 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
+import {Link} from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
+
 import Image1 from '../images/Image1.png';
 import Image2 from '../images/Image2.png';
 import Image3 from '../images/Image3.png';
-import {Link} from 'react-router-dom';
 
-class Info extends Component {
-    render() {
+
+const Info = () => {
+         const isDesktopOrLaptop = useMediaQuery({
+            query: '(min-device-width: 700px)'
+        })
+
         return (
             <div >
                 <div id="carouselExampleIndicators" className="carousel slide mb-5" data-ride="carousel">
@@ -19,7 +25,17 @@ class Info extends Component {
                             <img className="d-block w-100" src={Image1} alt="First slide" />
                             <div class="carousel-caption ">
                                 <h3>What is Evento?</h3>
-                                <h5>Evento is a new and upcoming Social Network Platform that focuses solely on Event Management.</h5>
+                                {isDesktopOrLaptop ?
+                                (
+                                    <h5>Evento is a new and upcoming Social Network Platform that focuses solely on Event Management.</h5>
+
+                                )
+                                :
+                                (
+                                    <p>Evento is a new and upcoming Social Network Platform that focuses solely on Event Management.</p>
+
+                                )
+                                }
                             </div>
                         </div>
 
@@ -27,7 +43,16 @@ class Info extends Component {
                             <img className="d-block w-100" src={Image2} alt="Second slide" />
                             <div class="carousel-caption">
                                 <h3 className="text-dark">Main Feature</h3>
-                                <h5 className="text-dark">Evento allows for organizing and managing Events with utmost ease. We have a very easy to use Interface that allows for interaction and personalized user experience with our User Recommendation System.</h5>
+                                {isDesktopOrLaptop ?
+                                (
+                                    <h5 className="text-dark">Evento allows for organizing and managing Events with utmost ease. We have a very easy to use Interface that allows for interaction and personalized user experience with our User Recommendation System.</h5>
+
+                                )
+                                :
+                                (
+                                    <p className="text-dark">Evento allows for organizing and managing Events with utmost ease. We have a very easy to use Interface that allows for interaction and personalized user experience with our User Recommendation System.</p>
+                                )
+                                }
                             </div>
                         </div>
 
@@ -36,7 +61,16 @@ class Info extends Component {
                                 <img className="d-block w-100" src={Image3} alt="Third slide" />
                                 <div class="carousel-caption ">
                                     <h3>Get Started</h3>
+                                    {isDesktopOrLaptop ?
+                                (
                                     <h5>Get Started with Evento and you can host and attend events in no time. Click the image to Register Now!</h5>
+
+                                )
+                                :
+                                (
+                                    <p>Get Started with Evento and you can host and attend events in no time. Click the image to Register Now!</p>
+                                )
+                                }
                                 </div>
                             </Link>
                             
@@ -53,7 +87,6 @@ class Info extends Component {
                 </div>
             </div>
         )
-    }
 }
 
 export default Info;
