@@ -1,5 +1,6 @@
 import React from 'react';
 import Posts from '../post/Posts';
+import Info from './Info';
 import {isAuthenticated} from '../auth';
 import DefaultProfile from '../images/evento_logo_white.png';
 
@@ -24,9 +25,16 @@ const Home = () => (
             
         </div>
 
-        {isAuthenticated() && (
+        {isAuthenticated() ?
+            (
                 <div className="container">
                     <Posts />
+                </div>
+            )
+            :
+            (
+                <div className="container">
+                    <Info />
                 </div>
             )
         }
