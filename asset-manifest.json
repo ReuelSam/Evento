@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.js": "/Evento/react-front/static/js/main.3d0a6735.chunk.js",
+    "main.js.map": "/Evento/react-front/static/js/main.3d0a6735.chunk.js.map",
+    "runtime-main.js": "/Evento/react-front/static/js/runtime-main.1c756d2e.js",
+    "runtime-main.js.map": "/Evento/react-front/static/js/runtime-main.1c756d2e.js.map",
+    "static/js/2.8b082e3b.chunk.js": "/Evento/react-front/static/js/2.8b082e3b.chunk.js",
+    "static/js/2.8b082e3b.chunk.js.map": "/Evento/react-front/static/js/2.8b082e3b.chunk.js.map",
+    "index.html": "/Evento/react-front/index.html",
+    "static/js/2.8b082e3b.chunk.js.LICENSE.txt": "/Evento/react-front/static/js/2.8b082e3b.chunk.js.LICENSE.txt",
+    "static/media/Image1.bdefbaec.png": "/Evento/react-front/static/media/Image1.bdefbaec.png",
+    "static/media/Image2.71e776c2.png": "/Evento/react-front/static/media/Image2.71e776c2.png",
+    "static/media/Image3.d2fd3f25.png": "/Evento/react-front/static/media/Image3.d2fd3f25.png",
+    "static/media/avatar.cea2a1dd.png": "/Evento/react-front/static/media/avatar.cea2a1dd.png",
+    "static/media/event.9994734f.jpg": "/Evento/react-front/static/media/event.9994734f.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1c756d2e.js",
+    "static/js/2.8b082e3b.chunk.js",
+    "static/js/main.3d0a6735.chunk.js"
+  ]
+}
